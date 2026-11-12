@@ -1,9 +1,14 @@
+# Source data — downloaded, not committed
 data/*.xlsx
 data/*.xls
 data/*.csv
 !data/README.md
+
+# Excel temp and lock files
 ~$*
 *.tmp
+
+# OS
 .DS_Store
 Thumbs.db
 desktop.ini

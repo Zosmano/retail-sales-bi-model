@@ -6,10 +6,14 @@ All figures are net of returns and exclude non-product lines, unless stated othe
 
 ## 1. Revenue is concentrated in customers, not products
 
-| Grouping | Share of net sales held by the top 10 |
-|---|---|
-| Customers | **16.3%** |
-| Products | **7.6%** |
+| Grouping | Net sales, top 10 | Share of total |
+|---|---|---|
+| Customers | $2,660,068 | **16.3%** |
+| Products | $1,443,504 | **7.6%** |
+
+For scale: total net sales across the period are **$18,926,266** on **44,715** orders, an average order value of **$439**.
+
+The single largest customer (`18102`) accounts for **3.5%** of net sales on their own. The single largest product (`22423`) reaches only **1.7%**.
 
 Ten customers out of thousands carry roughly a sixth of net sales. Ten products out of several thousand carry well under a tenth.
 

@@ -3,11 +3,26 @@
 [![View the documentation](https://img.shields.io/badge/Docs-View%20the%20model-2B1B3D?style=flat-square)](./docs)
 [![Excel](https://img.shields.io/badge/Excel-Power%20Query%20%7C%20Power%20Pivot%20%7C%20DAX-217346?style=flat-square)](#tools)
 [![Records](https://img.shields.io/badge/Records-1%2C067%2C371-0A6E4A?style=flat-square)](#the-data)
-[![GitHub](https://img.shields.io/badge/GitHub-Zosmano-181717?style=flat-square)](https://github.com/Zosmano)
 
 An end-to-end business intelligence model built in Excel on 1,067,371 online retail transactions, from raw source files through to an interactive dashboard. The project covers the full pipeline: shaping and cleaning in Power Query, a star-schema data model in Power Pivot, a measure layer in DAX, and a filterable dashboard with slicers and a timeline.
 
 Built by **Osman Zakaria, PMP** — [portfolio](https://zosmano.github.io/) · [LinkedIn](https://linkedin.com/in/osmanzakaria)
+
+---
+
+## The dashboard
+
+![Retail sales dashboard showing KPI cards, monthly gross sales against last year, top 10 customers and top 10 products, with date, year and country slicers](./images/dashboard-overview.png)
+
+Every element is cross-filtered through the date timeline and the year and country slicers, connected via Report Connections.
+
+| | |
+|---|---|
+| Gross Sales | **$19,642,692** |
+| Net Sales | **$18,926,266** |
+| Returns | **$716,426** (3.6% of gross) |
+| Orders | **44,715** |
+| Average Order Value | **$439** |
 
 ---
 
@@ -17,7 +32,7 @@ Most retail reporting answers *what happened*. This model was built to answer *w
 
 The headline findings are in [`docs/findings.md`](./docs/findings.md). Two of them changed how I read the dataset:
 
-- **Revenue is concentrated in customers, not products.** The top ten customers account for **16.3%** of net sales. The top ten products account for only **7.6%**. The customer base has a short head; the assortment has a long tail. Those two facts call for different commercial responses.
+- **Revenue is concentrated in customers, not products.** The top ten customers account for **$2,660,068 — 16.3%** of net sales. The top ten products account for **$1,443,504 — only 7.6%**. A single customer (`18102`) carries 3.5% on their own, while the largest product reaches just 1.7%. The customer base has a short head; the assortment has a long tail. Those two facts call for different commercial responses.
 - **One product looked like three.** StockCode `85099B` appears under three different descriptions in the source data. Grouped by description, each fragment looks mid-tier. Grouped by StockCode — the actual key — it totals **$180,512**. Any assortment decision taken on the description field would have been wrong.
 
 ---
@@ -88,7 +103,7 @@ No add-ins beyond what ships with Excel. The model is reproducible from the sour
 
 This repository is in progress. Planned additions:
 
-- [ ] Dashboard screenshots in `images/`
+- [x] Dashboard screenshot in `images/`
 - [ ] The workbook itself, or a cut-down version if file size allows
 - [ ] RFM segmentation (recency, frequency, monetary) on the customer base
 - [ ] Cohort retention analysis by first-purchase month

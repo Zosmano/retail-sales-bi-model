@@ -16,6 +16,7 @@ One row per invoice line. 1,067,371 rows loaded, 34,335 duplicates removed durin
 | `Country` | Text | Source | Customer country. Predominantly United Kingdom. |
 | `IsCancellation` | Whole Number | Derived | `1` where `Invoice` starts with `C`, else `0`. |
 | `IsProduct` | Whole Number | Derived | `0` for postage, fees, adjustments and other non-product lines; `1` otherwise. |
+| `HasCustomer` | True/False | Derived | `TRUE` where `Customer ID` is populated. Used to restrict customer-level analysis to identified customers while leaving revenue totals intact. |
 | `LineRevenue` | Decimal Number | Derived | `Quantity * Price`. Negative on cancellations. |
 
 ### Non-product StockCodes
@@ -59,7 +60,7 @@ A star schema with one fact table and one dimension. Deliberately simple: the co
 |---|---|
 | 34,335 fully duplicated rows | Removed in Power Query via `Table.Distinct` |
 | One StockCode, multiple Descriptions (e.g. `85099B`) | Group by `StockCode`; `Description` is display only |
-| Blank `Customer ID` on many rows | Retained. Excluded from customer-level analysis, included in revenue totals. |
+| Blank `Customer ID` on many rows | Retained and flagged `HasCustomer = FALSE`. Excluded from customer-level analysis, included in revenue totals. |
 | Negative quantities | Legitimate — these are cancellations, flagged rather than deleted |
 | Non-product revenue lines | Flagged `IsProduct = 0` rather than deleted |
 | Leading/trailing whitespace in text fields | Trimmed and cleaned in Power Query |

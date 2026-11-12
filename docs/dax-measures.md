@@ -65,8 +65,9 @@ DISTINCTCOUNT ( Sales_All[Customer ID] )
 
 ```dax
 Average Order Value :=
-DIVIDE ( [Net Sales], [Order Count] )
+DIVIDE ( [Gross Sales], [Order Count] )
 ```
+Built on gross rather than net, so the figure reflects the value of an order as placed. $19,642,692 over 44,715 orders gives **$439**. A net-based version would mix returns from later periods into the order in which they originated.
 
 ---
 
