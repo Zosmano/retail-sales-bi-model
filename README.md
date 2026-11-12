@@ -1,6 +1,6 @@
 # Retail Sales BI Model and Dashboard
 
-[![View the documentation](https://img.shields.io/badge/Docs-View%20the%20model-2B1B3D?style=flat-square)](./docs)
+[![Documentation](https://img.shields.io/badge/Docs-2B1B3D?style=flat-square)](./docs)
 [![Excel](https://img.shields.io/badge/Excel-Power%20Query%20%7C%20Power%20Pivot%20%7C%20DAX-217346?style=flat-square)](#tools)
 [![Records](https://img.shields.io/badge/Records-1%2C067%2C371-0A6E4A?style=flat-square)](#the-data)
 
