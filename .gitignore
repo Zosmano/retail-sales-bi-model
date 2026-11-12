@@ -1,0 +1,9 @@
+data/*.xlsx
+data/*.xls
+data/*.csv
+!data/README.md
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
