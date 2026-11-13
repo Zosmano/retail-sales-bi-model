@@ -76,6 +76,7 @@ Each stage is documented:
 - [`docs/data-dictionary.md`](./docs/data-dictionary.md) — every field, its type, its source and its business meaning
 - [`docs/dax-measures.md`](./docs/dax-measures.md) — the measure layer with the full DAX and what each measure is for
 - [`docs/findings.md`](./docs/findings.md) — what the analysis actually showed
+- [`analysis/`](./analysis) — a Python rebuild of the same model, used to cross-check every headline figure, plus RFM, cohort and return-rate analysis
 
 ---
 
@@ -104,11 +105,13 @@ No add-ins beyond what ships with Excel. The model is reproducible from the sour
 This repository is in progress. Planned additions:
 
 - [x] Dashboard screenshot in `images/`
+- [x] An independent Python reproduction and cross-check ([`analysis/`](./analysis))
+- [x] RFM segmentation (recency, frequency, monetary) on the customer base
+- [x] Cohort retention analysis by first-purchase month
+- [x] Return-rate analysis by product and by country
+- [ ] The same RFM and cohort views built back into the Excel model and dashboard
 - [ ] The workbook itself, or a cut-down version if file size allows
-- [ ] RFM segmentation (recency, frequency, monetary) on the customer base
-- [ ] Cohort retention analysis by first-purchase month
-- [ ] Return-rate analysis by product category and by country
-- [ ] A SQL reproduction of the core measures, as an independent cross-check
+- [ ] A SQL reproduction of the core measures
 - [ ] Basket analysis on co-purchased StockCodes
 
 ---
@@ -118,6 +121,7 @@ This repository is in progress. Planned additions:
 ```
 retail-sales-bi-model/
 ├── README.md
+├── analysis/    independent Python reproduction and cross-check
 ├── data/        source files (not committed) and how to obtain them
 ├── docs/        model documentation and findings
 └── images/      dashboard screenshots
